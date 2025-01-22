@@ -16,13 +16,15 @@ export default function Navbar(){
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: -280 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full p-6 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl ml-10 border-2 border-green-400"
+      className="w-full max-w-4xl p-6 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl border-2 border-green-400 mb-6 mt-4"
     >
       <header className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-center bg-gradient-to-r from-green-400 to-emerald-500 text-slate-200 bg-clip-text">
-          {location.pathname === "/" ? "WELCOME TO EMPLOYEE MANAGEMENT" : "ADD A NEW EMPLOYEE"}
+          {location.pathname === "/"
+            ? "WELCOME TO EMPLOYEE MANAGEMENT"
+            : "ADD A NEW EMPLOYEE"}
         </h1>
         <motion.button
           onClick={handleButtonClick}
